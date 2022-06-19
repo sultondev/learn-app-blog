@@ -17,7 +17,6 @@ const HeaderMenu = () => {
       <h1 className="text-2xl">Blog App</h1>
       <div
         className={`
-        bg-blue-500
         ex-sm:absolute left-0 top-0 bg-white p-4 w-1/2 ex-sm:h-screen ${menuState} z-10 flex flex-col gap-10
         lg:relative lg:left-0 lg:top-0 lg:flex-row lg:h-auto lg:p-0 lg:justify-between
         `}

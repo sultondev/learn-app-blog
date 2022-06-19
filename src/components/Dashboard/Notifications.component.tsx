@@ -5,10 +5,10 @@ import { followingUserDataType } from "../../typing/types/followingUser.type";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 
 const Notifications = () => {
-  const [notifications, setNotifications] =
+  const [notifications, ,] =
     useRecoilState<followingUserDataType[]>(followingStateData);
   return (
-    <section className="flex items-center gap-2">
+    <section className="flex items-center gap-2 py-4">
       <button className="text-2xl">
         <NotificationsNoneOutlinedIcon fontSize="large" />
       </button>
