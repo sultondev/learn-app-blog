@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
       <RecoilRoot>
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="*" element={<App />} />
         </Routes>
       </RecoilRoot>
     </BrowserRouter>

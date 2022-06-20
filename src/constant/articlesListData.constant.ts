@@ -3,8 +3,7 @@ import ReactPostPicture from "../media/images/posts/react-js.jpg";
 
 export const articleListData = [
   {
-    title:
-      "How to code in React JS jdailwjdiljawildjwaildjilawjdilawjdilawjildj",
+    title: "How to code in React JS",
     content: "First Of all before codding in react you should know JavaScript",
     date: `${new Date().getFullYear()}-${
       new Date().getMonth() + 2

@@ -1,8 +1,9 @@
 import { articlesItemsType } from "../../typing/types/articleItems.type";
 import BookmarkAddOutlinedIcon from "@mui/icons-material/BookmarkAddOutlined";
-import { TagWrapper } from "../../templates/TagsWrapper.template";
+import { TagWrapper } from "../../templates/TagWrapper.template";
 import { memo } from "react";
 import "./styles/ArticleSummary.style.css";
+import { Link } from "react-router-dom";
 const ArticleSummary = (props: articlesItemsType) => {
   const {
     title,
@@ -13,6 +14,7 @@ const ArticleSummary = (props: articlesItemsType) => {
     postPicture,
     tags,
     readTime,
+    id,
   } = props;
   return (
     <li
@@ -29,22 +31,26 @@ const ArticleSummary = (props: articlesItemsType) => {
           <p className="text-gray-400 ex-sm:">{date}</p>
         </div>
         <div className="flex justify-between my-4">
-          <div className="flex ex-sm:flex-col ex-sm:max-w-[70%] ">
-            <h6
-              className="text-2xl article-list__title 
+          <Link to={`/posts/${id}`} className="ex-sm:max-w-[70%]">
+            <div className="flex ex-sm:flex-col w-full">
+              <h6
+                className="text-2xl article-list__title 
               ex-sm:text-[16px] ex-sm:leading-62
               "
-            >
-              {title}
-            </h6>
-            <p className="article-list__content ex-sm:hidden md:block">
-              {content}
-            </p>
-          </div>
-          <img
-            src={postPicture}
-            className="object-cover ex-sm:max-w-[56px] ex-sm:h-[56px] "
-          />
+              >
+                {title}
+              </h6>
+              <p className="article-list__content ex-sm:hidden sm:block">
+                {content}
+              </p>
+            </div>
+          </Link>
+          <Link to={`/posts/${id}`}>
+            <img
+              src={postPicture}
+              className="object-cover ex-sm:w-[56px] ex-sm:h-[56px] sm:w-[90px] sm:h-[90px]"
+            />
+          </Link>
         </div>
         <div className="flex ex-sm:gap-4 ex-sm:items-center">
           <p className="article-list__tags">
