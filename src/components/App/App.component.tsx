@@ -3,6 +3,7 @@ import HeaderMenu from "../HeaderMenu/HeaderMenu.component";
 import { MemoDashboard } from "../Dashboard/Dashboard.component";
 import { Route, Routes } from "react-router-dom";
 import MemoArticleDetails from "../Articles/ArticleDetails.component";
+import CreateArticle from "../Articles/CreateArticle.component";
 // import SignUp from "../Auth/SignUp.component";
 // import SignIn from "../Auth/SignIn.component";
 
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MemoDashboard />} />
         <Route path="/posts/:postId" element={<MemoArticleDetails />} />
+        <Route path="/create-article" element={<CreateArticle />} />
       </Routes>
     </div>
   );
