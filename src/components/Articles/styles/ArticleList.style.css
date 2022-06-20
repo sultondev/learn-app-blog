@@ -1,0 +1,9 @@
+.article-list__item {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.article-list__content {
+  -webkit-line-clamp: 2;
+  max-width: 100%;
+}
+

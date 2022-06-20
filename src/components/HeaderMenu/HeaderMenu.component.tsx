@@ -4,6 +4,7 @@ import { useRecoilState } from "recoil";
 import { navBarDefaultStateData } from "../../recoil/atoms.state";
 import SignedInLinks from "../NavBar/SignedInLinks.component";
 import SignedOutLinks from "../NavBar/SignedOutLinks.component";
+import "./HeaderMenu.style.css";
 
 const HeaderMenu = () => {
   const [menuState, setMenuState] = useRecoilState<string>(
@@ -11,13 +12,12 @@ const HeaderMenu = () => {
   );
   return (
     <header
-      className="header ex-sm: flex justify-between items-center px-2 py-4 border-b-2 border-b-black
+      className="app-header ex-sm: flex justify-between items-center px-2 py-4 
     "
     >
       <h1 className="text-2xl">Blog App</h1>
       <div
         className={`
-        bg-blue-500
         ex-sm:absolute left-0 top-0 bg-white p-4 w-1/2 ex-sm:h-screen ${menuState} z-10 flex flex-col gap-10
         lg:relative lg:left-0 lg:top-0 lg:flex-row lg:h-auto lg:p-0 lg:justify-between
         `}
