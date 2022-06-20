@@ -5,6 +5,7 @@ import { navBarDefaultStateData } from "../../recoil/atoms.state";
 import SignedInLinks from "../NavBar/SignedInLinks.component";
 import SignedOutLinks from "../NavBar/SignedOutLinks.component";
 import "./HeaderMenu.style.css";
+import { Link } from "react-router-dom";
 
 const HeaderMenu = () => {
   const [menuState, setMenuState] = useRecoilState<string>(
@@ -15,7 +16,9 @@ const HeaderMenu = () => {
       className="app-header ex-sm: flex justify-between items-center px-2 py-4 
     "
     >
-      <h1 className="text-2xl">Blog App</h1>
+      <h1 className="text-2xl">
+        <Link to="/">Blog App</Link>
+      </h1>
       <div
         className={`
         ex-sm:absolute left-0 top-0 bg-white p-4 w-1/2 ex-sm:h-screen ${menuState} z-10 flex flex-col gap-10
